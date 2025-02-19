@@ -72,7 +72,7 @@ void draw(){
           triangle(r, -triSize / 2, r + triSize / 2, -triSize / 2, r, triSize / 2); 
           break;
         case 3:  // Звезда
-          drawStar(r, 0, ellipseSize * 0.5, ellipseSize, 5); // 5-крака на звездата
+          drawStar(r, 0, ellipseSize * 0.5, ellipseSize, 5); // 5 крака на звездата
           break;
       }
 
