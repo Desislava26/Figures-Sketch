@@ -34,7 +34,7 @@ void setup(){
   colArray = isBluePalette ? bluePalette : pinkPalette; // Задаваме текущата палитра
 
   // Избиране на случайна форма
-  shapeTypeSelector = int(random(4));  // 0 = circle, 1 = square, 2 = triangle, 3 = star
+  shapeTypeSelector = int(random(4));
 }
 
 void draw(){
@@ -54,7 +54,7 @@ void draw(){
     for (float a = 0; a < 360; a += 360 / aSegment) {
       collArrayCounter++;
       if (collArrayCounter > colArray.length - 1) collArrayCounter = 0;
-      fill(colArray[collArrayCounter]);  // Избираме цвят от текущата палитра
+      fill(colArray[collArrayCounter]);
 
       pushMatrix();
       rotate(radians(a));
