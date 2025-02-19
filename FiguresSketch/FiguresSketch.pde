@@ -29,8 +29,8 @@ void setup(){
   mouseX = 10;
   frameRate(10);
 
-  // Избиране на случайна палитра (синя или розова)
-  isBluePalette = random(1) < 0.5; // 50% шанс за синя палитра или розова
+  // Избиране на случайна палитра
+  isBluePalette = random(1) < 0.5; // 50% шанс
   colArray = isBluePalette ? bluePalette : pinkPalette; // Задаваме текущата палитра
 
   // Избиране на случайна форма (квадрат, триъгълник или звезда)
