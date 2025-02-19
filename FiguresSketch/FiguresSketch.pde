@@ -19,7 +19,7 @@ color[] pinkPalette = {
 
 color[] colArray; // Текущата палитра
 int shapeTypeSelector; // 0 = circle, 1 = square, 2 = triangle, 3 = star
-boolean isBluePalette; // Дали е избрана синята палитра
+boolean isBluePalette;
 
 void setup(){
    size(900, 900);
@@ -30,10 +30,10 @@ void setup(){
   frameRate(10);
 
   // Избиране на случайна палитра
-  isBluePalette = random(1) < 0.5; // 50% шанс
+  isBluePalette = random(1) < 0.5;
   colArray = isBluePalette ? bluePalette : pinkPalette; // Задаваме текущата палитра
 
-  // Избиране на случайна форма (квадрат, триъгълник или звезда)
+  // Избиране на случайна форма
   shapeTypeSelector = int(random(4));  // 0 = circle, 1 = square, 2 = triangle, 3 = star
 }
 
