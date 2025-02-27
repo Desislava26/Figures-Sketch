@@ -1,20 +1,20 @@
 int collArrayCounter;
 color[] bluePalette = {
-  color(25, 165, 190), // Синьо
-  color(95, 170, 200), // Светло синьо
-  color(120, 190, 210), // Тюркоазено
-  color(170, 210, 230), // Синьо-сиво
-  color(205, 225, 245), // По-светъл нюанс синьо
-  color(220, 240, 250)  // Бяло-синьо
+  color(25, 165, 190),
+  color(95, 170, 200),
+  color(120, 190, 210),
+  color(170, 210, 230),
+  color(205, 225, 245),
+  color(220, 240, 250) 
 };
 
 color[] pinkPalette = {
-  color(255, 182, 193), // Светло розово
-  color(255, 105, 180), // Цикламено
-  color(255, 160, 210), // Розово
-  color(255, 85, 145),  // Тъмно розово
-  color(255, 50, 120),  // Ярко розово
-  color(255, 200, 230)  // Бяло-розово
+  color(255, 182, 193),
+  color(255, 105, 180),
+  color(255, 160, 210),
+  color(255, 85, 145),
+  color(255, 50, 120),
+  color(255, 200, 230)
 };
 
 color[] colArray; // Текущата палитра
@@ -29,18 +29,18 @@ void setup(){
   mouseX = 10;
   frameRate(10);
 
-  // Избиране на случайна палитра
-  isBluePalette = random(1) < 0.5;
-  colArray = isBluePalette ? bluePalette : pinkPalette; // Задаваме текущата палитра
 
-  // Избиране на случайна форма
+  isBluePalette = random(1) < 0.5;
+  colArray = isBluePalette ? bluePalette : pinkPalette;
+
+  
   shapeTypeSelector = int(random(4));
 }
 
 void draw(){
   background(#282828);
 
-  translate(width / 2, height / 2);  // Центрираме на екрана
+  translate(width / 2, height / 2); 
   float rStep = 30;
   float rMax = 1920;
   float rMin = mouseX;
@@ -59,7 +59,7 @@ void draw(){
       pushMatrix();
       rotate(radians(a));
 
-      // В зависимост от shapeTypeSelector рисуваме само една форма
+
       switch(shapeTypeSelector) {
         case 0:  // Кръгове
           ellipse(r, 0, ellipseSize, ellipseSize); 
@@ -83,7 +83,7 @@ void draw(){
   saveFrame("output-####.png");
 }
 
-// Функция за рисуване на звезда
+
 void drawStar(float x, float y, float radius1, float radius2, int npoints) {
   float angle = TWO_PI / npoints;
   float halfAngle = angle / 2.0;
